@@ -6,8 +6,9 @@
   padding: 0;
 }
 
-body{
+html, body{
   font-family: 'Graphik', sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* HOME */
@@ -481,9 +482,12 @@ body{
   background-color: transparent;
   color: #fff;
   border: none;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
   cursor: pointer;
   opacity: 0.4;
+  text-transform: uppercase;
+  
 }
 
 .watchEventsBtns button.active{
@@ -808,6 +812,7 @@ body{
   border-bottom: 1px solid gray;
   padding: 20px 0;
   text-align: center;
+  font-size: 0.9rem;
 }
 
 .basePlanItems .basePlanTableTitle{
@@ -925,7 +930,7 @@ body{
   text-align: left;
   padding: 20px 0;
   text-align: center;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .bundlePlanItems td .dashLine{
@@ -1231,6 +1236,7 @@ body{
   background-color: #e8eaed;
   color: #586174;
   padding: 40px 0;
+  border-top: 1px solid lightgray;
 }
 
 .footerBottomItems{
