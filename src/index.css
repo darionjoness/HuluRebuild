@@ -1,13 +1,1365 @@
-body {
+@import url('https://fonts.cdnfonts.com/css/graphik');
+
+*{
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  font-family: 'Graphik', sans-serif;
 }
+
+/* HOME */
+
+.home{
+  background: url('./components/img/homeBg.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 90vh;
+  position: relative;
+}
+
+/* TOP of home shadow */
+.home::after{
+  content: '';
+  position: absolute;
+  top: -10vh;
+  left: 0;
+  height: 10vh;
+  width: 100%;
+  box-shadow: 0px 14px 33px 25px rgba(0,0,0,0.75);
+}
+
+.homeTop{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.homeTop img{
+  margin: 5px 0 0 30px;
+  width: 65px;
+  height: 65px;
+  z-index: 5;
+}
+
+.login{
+  color: #a8afbd;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  z-index: 5;
+  transition: all 0.4s ease;
+  margin: 0 30px 0 0;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.login:hover{
+  background-color: #a8afbd;
+  color: #fff;
+}
+
+.homeTrioBundle{
+  color: #fff;
+  margin-top: 30px;
+}
+
+.homeTrioBundleItems{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.homeTrioBundle p{
+  color: #1ce783;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.homeTrioBundle img{
+  width: 500px;
+  margin: 20px 0;
+  padding: 0 20px;
+}
+
+.homeTrioBundle h2{
+  max-width: 500px;
+  margin: 0 auto;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.homeTrioBtn{
+  background-color: #1ce783;
+  padding: 14px;
+  min-width: 600px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.homeTrioBtn:hover{
+  opacity: 0.7;
+}
+
+.terms {
+  margin: 20px 0;
+  color: #f4f4f4;
+  cursor: pointer;
+}
+
+.signUp{
+  color: #f4f4f4;
+  cursor: pointer;
+}
+
+.homeDuoBundle{
+  background-color: rgba(0,0,0,0.4);
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+}
+
+.homeDuoBundleItems{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  text-align: center;
+  height: 100%;
+}
+
+.homeDuoBundleItems img{
+  width: 350px;
+  margin-right: 40px;
+}
+
+.homeDuoBundleItems .duoBundleInfo{
+  width: 400px;
+}
+
+.homeDuoBundleItems .duoBundleInfo p{
+  color: #1ce783;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.homeDuoBundleItems .duoBundleInfo h2{
+  font-weight: 500;
+
+}
+
+.duoBundleBtnDiv{
+  margin-left: 100px;
+}
+
+.duoBundleBtnDiv .duoBundleBtn{
+  background-color: transparent;
+  border: 2px solid #f4f4f4;
+  color: #f4f4f4;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s ease-out;
+  height: 50px;
+  width: 170px;
+}
+
+.duoBundleBtnDiv .duoBundleBtn:hover{
+  background-color: #f4f4f4;
+  color: #000;
+}
+
+.duoBundleBtnDiv a{
+  color: #f4f4f4;
+  font-size: 0.7rem;
+}
+
+.duoBundleBtnDiv a:hover{
+  text-decoration: none;
+}
+
+/* INCLUDED PLANS */
+
+.includedPlans{
+  background-color: #0b0c0f;
+  color: #fff;
+  padding-bottom: 50px;
+}
+
+.includedPlansText{
+  text-align: center;
+  margin-top: 50px;
+}
+
+.includedPlansText .textGreen{
+  color: #1ce783;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.includedPlansText h1{
+  margin: 20px 0;
+  font-size: 2.2rem;
+}
+
+.includedPlansText .includedPlansDesc{
+  margin: 20px auto;
+  max-width: 700px;
+  margin-bottom: 50px;
+}
+
+.includedPlansMovies{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 40px 0;
+}
+
+.includedPlansMovies .bobsBurgers{
+  background: url('./components/img/bobsBurgers.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  height: 400px;
+  padding: 20px;
+  position: relative;
+}
+
+.includedPlansMovies .bobsBurgers::after{
+  content: '';
+  background-color: rgba(0,0,0,0.3);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+.includedPlansMovies .bobsBurgers p{
+  margin: 10px 0;
+  z-index: 2;
+  position: relative;
+}
+
+.includedPlansMovies .bobsBurgers h3{
+  z-index: 2;
+  position: relative;
+}
+
+.includedPlansMovies .prey{
+  background: url('./components/img/prey.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  height: 400px;
+  padding: 20px;
+  position: relative;
+}
+
+.includedPlansMovies .prey::after{
+  content: '';
+  background-color: rgba(0,0,0,0.25);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.includedPlansMovies .prey p{
+  margin: 10px 0;
+  z-index: 2;
+  position: relative;
+}
+
+.includedPlansMovies .prey h3{
+  z-index: 2;
+  position: relative;
+}
+
+.includedPlansMovies .theHandmaidsTale{
+  background: url('./components/img/handmadeTails.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  height: 400px;
+  padding: 20px;
+  position: relative;
+}
+
+.includedPlansMovies .theHandmaidsTale::after{
+  content: '';
+  background-color: rgba(0,0,0,0.25);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.includedPlansMovies .theHandmaidsTale p{
+  margin: 10px 0;
+  z-index: 2;
+  position: relative;
+}
+
+.includedPlansMovies .theHandmaidsTale h3{
+  z-index: 2;
+  position: relative;
+}
+
+.includedPlansMovies .houseOfTheDragon{
+  background: url('./components/img/houseOfTheDragon.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  height: 400px;
+  padding: 20px;
+  position: relative;
+}
+
+.includedPlansMovies .houseOfTheDragon::after{
+  content: '';
+  background-color: rgba(0,0,0,0.25);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.includedPlansMovies .houseOfTheDragon p{
+  margin: 10px 0;
+  z-index: 2;
+  position: relative;
+}
+
+.includedPlansMovies .houseOfTheDragon h3{
+  z-index: 2;
+  position: relative;
+}
+
+.includedPlansMovies .houseOfTheDragon .networkAddOns{
+  position: absolute;
+  bottom: -40px;
+  font-size: 0.65rem;
+  left: 0;
+  color: lightgray;
+}
+
+/* LIVE TV */
+
+.liveTv{
+  background-color: #0b0c0f;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.liveTv .liveTvItems{
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.textGreen{
+  color: #1ce783;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.8rem;
+  margin: 20px 0;
+}
+
+.liveTvItems h1{
+  font-size: 2.2rem;
+  margin: 30px 0;
+}
+
+.liveTvItems .liveTvInfo{
+  margin: 15px 0;
+  line-height: 1.2;
+}
+
+.liveTvItems .restrictions{
+  color: lightgray;
+  font-size: 0.6rem;
+  margin: 20px 0;
+}
+
+.liveTvItems .viewChannels{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.liveTvItems .viewChannels .rightArrow{
+  position: relative;
+}
+
+.liveTvItems .viewChannels::after{
+  content: '';
+  position: absolute;
+  width: 270px;
+  height:1px;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+}
+
+.chevronDown{
+  color: #fff;
+  display: block;
+  font-size: 1.4rem;
+  margin-top: 50px;
+  animation: bounce 2s infinite;
+}
+
+/* WATCH EVENTS */
+
+#watchEvents{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90vh;
+}
+
+#watchEvents.showLiveSportsBg{
+  background: url('./components/img/liveSportsImg.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#watchEvents.showBreakingNewsBg{
+  background: url('./components/img/breakingNews.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#watchEvents.showBiggestEventBg{
+  background: url('./components/img/biggestEvents.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.watchEventsItems{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+.watchEventsBtns button{
+  margin: 0 15px 20px 0;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 0.4;
+}
+
+.watchEventsBtns button.active{
+  opacity: 1;
+  border-bottom: 4px solid #fff;
+  padding-bottom: 15px;
+}
+
+.watchEventsBtns button.notActive{
+  opacity: 0.4;
+}
+
+/* LIVE SPORTS */
+
+#liveSports{
+  display: block;
+}
+
+#liveSports.showTab{
+  display: block;
+}
+
+#liveSports.hideTab{
+  display: none;
+}
+
+.liveSportsText{
+  max-width: 500px;
+  color: #fff;
+}
+
+.liveSportsText h1{
+  font-size: 2.5rem;
+  margin: 20px 0;
+}
+
+.liveSportsText p{
+  font-size: 1.1rem;
+}
+
+.liveSportsChannels{
+  display: flex;
+}
+
+.liveSportsChannel{
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  height: 50px;
+  width: 50px;
+  margin: 20px 15px 0 0;
+}
+
+.liveSportsChannel img{
+  width: 100%;
+}
+
+.liveSportsSmallMessage{
+  color: lightgray;
+  font-size: 0.65rem;
+  margin-top: 40px;
+}
+
+.liveSportsSmallMessage a {
+  color: lightgray;
+}
+
+/* BREAKING NEWS */
+
+#breakingNews{
+  display: none;
+}
+
+#breakingNews.showTab{
+  display: block;
+}
+
+#breakingNews.hideTab{
+  display: none;
+}
+
+.breakingNewsText{
+  max-width: 500px;
+  color: #fff;
+}
+
+.breakingNewsText h1{
+  font-size: 2.5rem;
+  margin: 20px 0;
+}
+
+.breakingNewsText p{
+  font-size: 1.1rem;
+}
+
+.breakingNewsChannels{
+  display: flex;
+}
+
+.breakingNewsChannel{
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  height: 50px;
+  width: 50px;
+  margin: 20px 15px 0 0;
+}
+
+.breakingNewsChannel img{
+  width: 100%;
+}
+
+.smallMessage{
+  color: lightgray;
+  font-size: 0.65rem;
+  margin-top: 40px;
+}
+
+.smallMessage a {
+  color: lightgray;
+}
+
+/* BIGGEST EVENTS */
+
+#biggestEvents{
+  display: none;
+}
+
+#biggestEvents.showTab{
+  display: block;
+}
+
+#biggestEvents.hideTab{
+  display: none;
+}
+
+.biggestEventsText{
+  max-width: 500px;
+  color: #fff;
+}
+
+.biggestEventsText h1{
+  font-size: 2.5rem;
+  margin: 20px 0;
+}
+
+.biggestEventsText p{
+  font-size: 1.1rem;
+}
+
+.biggestEventsChannels{
+  display: flex;
+}
+
+.biggestEventsChannel{
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  height: 50px;
+  width: 50px;
+  margin: 20px 15px 0 0;
+}
+
+.biggestEventsChannel img{
+  width: 100%;
+}
+
+.smallMessage{
+  color: lightgray;
+  font-size: 0.65rem;
+  margin-top: 40px;
+}
+
+.smallMessage a {
+  color: lightgray;
+}
+
+/* SELECT PLAN */
+.selectPlan{
+  background-color: #0b0c0f;
+  color: #fff;
+}
+
+.selectPlanItems{
+
+}
+
+.selectPlanHeader{
+  text-align: center;
+  margin: 80px 0 60px 0;
+}
+
+.selectPlanHeader h1{
+  margin: 30px 0;
+  font-size: 2.5rem;
+}
+
+.selectPlanHeader p{
+  font-size: 1.1rem;
+}
+
+
+/* BASE PLAN */
+
+.basePlan{
+  margin: 50px 0;
+}
+
+.basePlan.showBundle{
+  display: block;
+}
+
+.basePlan.noShowBundle{
+  display: none;
+}
+
+.switchPlansRow{
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+
+.switchPlans{
+  display: flex;
+  padding: 70px 0;
+  margin-left: 50px;
+}
+
+.singleLogo p{
+  margin: 0 5px 5px 0;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.singleLogo img{
+  width: 35px;
+}
+
+.baseTripleLogo{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 5px;
+}
+
+.baseTripleLogo p{
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.baseTripleLogo img{
+  width: 150px;
+}
+
+
+
+.switch{
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 34px;
+}
+
+.switch input{
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #424957;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider::before{
+  position: absolute;
+  content: '';
+  height: 35px;
+  width: 35px;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider.round{
+  border-radius: 34px;
+}
+
+.slider.round:before{
+  border-radius: 50%;
+}
+
+.basePlanItems table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.basePlanItems th{
+}
+
+
+.basePlanItems td{
+  border-bottom: 1px solid gray;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.basePlanItems .basePlanTableTitle{
+  text-align: left;
+}
+
+.huluWithAds{
+  padding-right: 20px;
+  
+}
+
+.huluWithAds span{ 
+  display: block;
+  background-color: #1ce783;
+  width: 125px;
+  padding: 7px 10px;
+  border-radius: 15px;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 10px auto;
+}
+
+.huluWithAds button{
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  width: 300px;
+  padding: 12px;
+  cursor: pointer;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+
+.huluWithAds button:hover{
+  opacity: 0.9;
+}
+
+.freeTrial{
+  color: lightgray;
+  font-weight: 500;
+  font-size: 0.8rem;
+  padding-top: 15px;
+  text-transform: uppercase;
+  margin: 5px 0;
+}
+
+.huluNoAds{
+  padding-top: 45px;
+}
+
+.huluNoAds button{
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  width: 300px;
+  padding: 12px;
+  cursor: pointer;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+
+.check{
+  color: #1ce783;
+  font-size: 1.75rem;
+}
+
+.basePlanTableTitle + td .dashLine{
+  margin: 0 auto;
+} 
+
+.dashLine{
+  background-color: #fff;
+  width: 10px;
+  height: 1px;
+}
+
+.basePlan .basePlanBottomMessage{
+  font-size: 0.6rem;
+  margin-top: 10px;
+}
+
+/* BUNDLE PLAN */
+
+.bundlePlan{
+  margin: 50px 0;
+}
+
+.bundlePlan.showBundle{
+  display: block;
+}
+
+.bundlePlan.noShowBundle{
+  display: none;
+}
+
+.bundlePlanItems table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.bundlePlanItems .headRow{
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+
+.bundlePlanItems th{
+  padding: 20px 0 30px 0;
+}
+
+.bundlePlanItems td{
+  border-bottom: 1px solid gray;
+  text-align: left;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.bundlePlanItems td .dashLine{
+  margin: 0 auto;
+}
+
+.bundlePlanItems .tableTitle{
+  text-align: left;
+}
+
+.tripleLogo{
+  margin-top: 30px;
+  display: flex; 
+}
+
+.tripleLogo .basePlans{
+  margin: 0 5px;
+}
+
+.tripleLogo .basePlans p{
+  font-weight: 400;
+  margin-bottom: 7px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.tripleLogo .basePlans img{
+  width: 30px;
+}
+
+.slider2{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1ce783;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider2::before{
+  position: absolute;
+  content: '';
+  height: 35px;
+  width: 35px;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider2.round{
+  border-radius: 34px;
+}
+
+.slider2.round:before{
+  border-radius: 50%;
+}
+
+.tripleLogo .bundleSave{
+  margin: 0 5px;
+}
+
+.tripleLogo img{
+  width: 150px;
+}
+
+.tripleLogo .bundleSave p{
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.trioBasic p{
+  font-weight: 500;
+}
+
+.trioBasic img{
+  width: 150px;
+}
+
+.trioBasic button{
+  margin-top: 10px;
+  width: 225px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.trioBasic button:hover{
+  opacity: 0.9;
+}
+
+.trioPremium img{
+  width: 150px;
+}
+
+.trioPremium button{
+  margin-top: 10px;
+  width: 225px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.trioPremium button:hover{
+  opacity: 0.9;
+}
+
+.huluLiveTv img{
+  width: 150px;
+}
+
+.huluLiveTv button{
+  margin-top: 10px;
+  width: 225px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.huluLiveTv button:hover{
+  opacity: 0.9;
+}
+
+.huluLiveTv img + p{
+  color: #0b0c0f;
+}
+
+.bundlePlanBottomMessage{
+  margin-top: 10px;
+  font-size: 0.6rem;
+}
+
+.bundlePlanBottomMessage p{
+  margin: 3px 0;
+}
+
+.bundlePlanBottomMessage a{
+  color: #fff;
+}
+
+/* BASE PLAN ADD ONS */
+
+.basePlanAddOns{
+  background-color: #0b0c0f;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.basePlanAddOns.hide{
+  display: none;
+}
+
+.basePlanAddOnsItems{
+  max-height: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.basePlanAddOnsItems.showAddOns{
+  max-height: 600px;
+}
+
+.basePlanAddOnsItems.hideAddOns{
+  max-height: 0;
+}
+
+.basePlanAddOnsHeaderText h1{
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+}
+
+.basePlanAddOnsHeaderText p + p{
+  margin-bottom: 30px;
+}
+
+.basePlanAddOnsItems table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.basePlanAddOnsItems td{
+  border-top: 1px solid gray;
+  padding: 15px 0;
+}
+
+.baseAddOnsBtn{
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+  padding: 25px 0;
+  cursor: pointer;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.baseAddOnsBtn button{
+  background-color: transparent;
+  color: #f4f4f4;
+  border: none;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.baseAddOnsBtn .baseAddOnsChevron{
+  font-size: 2.5rem;
+  color: gray;
+}
+
+/* BUNDLE PLAN ADD ONS */
+
+.bundlePlanAddOns{
+  background-color: #0b0c0f;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.bundlePlanAddOnsItems{
+  transition: all 0.3s ease-in-out;
+}
+
+.bundlePlanAddOnsItems.showAddOns{
+  max-height: 600px;
+}
+
+.bundlePlanAddOnsItems.hideAddOns{
+  max-height: 0;
+}
+
+
+.bundlePlanAddOnsHeaderText h1{
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.bundlePlanAddOnsHeaderText p{
+  margin: 3px 0;
+}
+
+.bundlePlanAddOnsHeaderText p + p{
+  margin-bottom: 30px;
+}
+
+.bundlePlanAddOns table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bundlePlanAddOns td{
+  border-top: 1px solid gray;
+  padding: 15px 0;
+  padding-right: 100px;
+}
+
+.bundlePlanAddOns.hide{
+  display: none;
+}
+
+.bundleAddOnsBtn{
+  margin-top: -14px;
+}
+
+/* FOOTER TOP */
+
+.footerTop{
+  background-color: #e8eaed;
+  color: #586174;
+  padding: 50px 0;
+}
+
+.footerTopItems{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footerTopItems strong{
+  color: #272c34;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.footerTopItems p{
+  margin: 10px 0;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* FOOTER BOTTOM */
+
+.footerBottom{
+  background-color: #e8eaed;
+  color: #586174;
+  padding: 40px 0;
+}
+
+.footerBottomItems{
+  display: flex;
+  font-size: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.footerBottomSocials{
+  display: flex;
+  font-size: 0.9rem;
+}
+
+.footerBottomItems p{
+  margin: 0 7px;
+}
+
+
+/* UTILITY */
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  overflow: hidden;
+}
+
+/* CREATE ANIMATIONS */
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+ 
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+
+/* MEDIA QUERIES */
+
+@media(max-width: 1068px){
+  
+}
+
+@media(max-width: 968px){
+  /* HOME DUO */
+  .homeDuoBundleItems img{
+    width: 300px;
+    margin-right: 40px;
+  }
+
+  .homeDuoBundle{
+    height: 200px;
+  }
+
+  /* INCLUDE PLANS */
+
+  .includedPlansMovies{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media(max-width: 768px){
+
+  /* HOME TRIO */
+  .homeTrioBtn{
+    min-width: 450px;
+  }
+  
+  /* HOME DUO */
+
+  .homeDuoBundleItems{
+    flex-direction: column;
+  }
+
+  .duoBundleBtnDiv{
+    margin-left: 0;
+  }
+
+  .homeDuoBundleItems .duoBundleInfo{
+    margin: 10px 0;
+  }
+
+  .homeDuoBundleItems img{
+    width: 175px;
+    margin-right: 40px;
+  }
+
+  .homeDuoBundleItems .duoBundleInfo h2{
+    font-size: 0.9rem;
+    margin: 5px 0;
+  }
+
+  /* INCLUDED PLANS */
+
+  .includedPlansItems{
+    padding: 0 5px;
+   }
+
+   .includedPlansMovies{
+    gap: 0.1rem;
+   }
+
+  .includedPlansMovies .houseOfTheDragon{
+    max-width: 100%;
+    height: 400px;
+   }
+ 
+   .includedPlansMovies .theHandmaidsTale{
+    max-width: 100%;
+    height: 400px;
+   }
+ 
+   .includedPlansMovies .prey{
+    max-width: 100%;
+    height: 400px;
+   }
+ 
+   .includedPlansMovies .bobsBurgers{
+    max-width: 100%;
+    height: 400px;
+   }
+
+}
+
+
+
+
+
